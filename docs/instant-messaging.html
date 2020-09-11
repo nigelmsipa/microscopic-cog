@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Responsive Bootstrap 4 Admin &amp; Dashboard Template">
+	<meta name="author" content="Bootlab">
+
+	<title>AppStack - Admin &amp; Dashboard Template</title>
+
+	<link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
+
+	<!-- PICK ONE OF THE STYLES BELOW -->
+	<link href="css/classic.css" rel="stylesheet">
+	<!-- <link href="css/corporate.css" rel="stylesheet"> -->
+	<!-- <link href="css/modern.css" rel="stylesheet"> -->
+
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav id="sidebar" class="sidebar">
+			<div class="sidebar-content ">
+				<a class="sidebar-brand" href="index.html" style="text-align: center;">
+
+					<span class="align-middle" style="font-size: 2em;">Aspire</span>
+				</a>
+
+				<ul class="sidebar-nav">
+					<li class="sidebar-header">
+						Training
+					</li>
+
+					<li class="sidebar-item">
+						<a href="#pages" data-toggle="collapse" class="sidebar-link collapsed">
+							<i class=" fe fas fa-id-card"></i><span class="align-middle">Data
+								Collection</span>
+						</a>
+						<ul id="pages" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="send-intake-form.html">Send
+									Intake Form
+								</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="pending-intake-forms.html">Pending
+									Forms</a>
+							</li>
+							<li class="sidebar-item"><a class="sidebar-link"
+									href="completed-intake-forms.html">Completed
+									Forms</a></li>
+
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a href="#auth" data-toggle="collapse" class="sidebar-link collapsed">
+							<i class=" fe fas fa-clipboard"></i> <span class="align-middle">Exercise
+								Prescription
+							</span>
+
+						</a>
+						<ul id="auth" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="client-profile.html">Design
+									Workout</a></li>
+							<li class="sidebar-item">
+								<a href="#projects" data-toggle="collapse" class="sidebar-link collapsed">
+									Resources
+								</a>
+								<ul id="projects" class="sidebar-dropdown list-unstyled collapse">
+									<li class="sidebar-item">
+										<a class="sidebar-link" href="training-templates.html">Training Templates</a>
+									</li>
+									<li class="sidebar-item">
+										<a class="sidebar-link" href="normative-data.html">Normative Data <span
+												class="sidebar-badge badge badge-primary">New</span></a>
+									</li>
+								</ul>
+							</li>
+
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a href="#layouts" data-toggle="collapse" class="sidebar-link collapsed">
+							<i class="fas fa-running"></i> <span class="align-middle">Workout
+								log</span>
+						</a>
+						<ul id="layouts" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="client-profiles-list.html">Log
+									Workout</a></li>
+
+						</ul>
+
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="trainer-work-flow.html">
+							<i class=" fe fas fa-link"></i><span class="align-middle">Trainer
+								Work-flow</span>
+						</a>
+					</li>
+
+
+
+					<li class="sidebar-header">
+						Team
+					</li>
+
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="instant-messaging.html">
+							<i class=" fe fas fa-comment-alt"></i><span class="align-middle">Chat</span>
+						</a>
+					</li>
+
+					<li class="sidebar-header">
+						Statistics
+					</li>
+					<li class="sidebar-item">
+						<a href="#form-plugins" data-toggle="collapse" class="sidebar-link collapsed">
+							<i class=" fe far fa-id-card"></i> <span class="align-middle">Intake
+								Form Stats
+							</span>
+						</a>
+						<ul id="form-plugins" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="client-profiles-list.html">Individual
+									Stats</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="global-profile.html">Global Stats</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="sidebar-item">
+						<a href="#datatables" data-toggle="collapse" class="sidebar-link collapsed">
+							<i class="fe fas fa-clipboard-check"></i> <span class="align-middle">Programming
+								Stats</span>
+						</a>
+						<ul id="datatables" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="client-profiles-list.html">Individual
+									Stats</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="global-profile.html">Global Stats</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="sidebar-item">
+						<a href="#charts" data-toggle="collapse" class="sidebar-link collapsed">
+							<i class=" fe fas fa-heartbeat"></i> <span class="align-middle">Workout
+								Stats</span>
+
+						</a>
+						<ul id="charts" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+							<li class="sidebar-item"><a class="sidebar-link" href="client-profiles-list.html">Individual
+									Stats</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="global-profile.html">Global Stats</a>
+							</li>
+						</ul>
+					</li>
+					<li class="sidebar-header">
+						Settings
+					</li>
+					<li class="sidebar-item">
+						<a class="sidebar-link" href="general-settings.html">
+							<i class="fas fa-cog"></i> <span class="align-middle">Settings</span>
+						</a>
+					</li>
+
+
+				</ul>
+
+				<div class="sidebar-bottom d-none d-lg-block">
+					<a href="personalize-settings.html">
+						<div class="sidenav__profile">
+							<div class="sidenav__profile-avatar"></div>
+							<div class="sidenav__profile-title text-light">Nigel Msipa</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</nav>
+
+		<div class="main">
+			<nav class="navbar navbar-expand navbar-light bg-white">
+				<a class="sidebar-toggle d-flex mr-2">
+					<i class="hamburger align-self-center"></i>
+				</a>
+
+				<form class="form-inline d-none d-sm-inline-block">
+					<input class="form-control form-control-no-border mr-sm-2" type="text"
+						placeholder="Search projects..." aria-label="Search">
+				</form>
+
+				<div class="navbar-collapse collapse">
+					<ul class="navbar-nav ml-auto">
+
+						<li class="nav-item dropdown">
+							<a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#"
+								data-toggle="dropdown">
+
+							</a>
+
+							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#"
+								data-toggle="dropdown">
+								<i class="fas fa-user" style="font-size:1.25em;"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<a class="dropdown-item" href="personalize-settings.html"><i class="align-middle mr-1"
+										data-feather="user"></i> Profile</a>
+								<a class="dropdown-item" href="general-settings.html"><i class="fas fa-cog mr-1"></i>
+									Settings</a>
+								<a class="dropdown-item" href="global-profile.html"> <i
+										class="fas fa-chart-line mr-1"></i> Statistics</a>
+								<div class="dropdown-divider"></div>
+
+								<a class="dropdown-item" href="sign-out.html">Sign out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+
+			</nav>
+
+			<main class="content">
+				<div class="container-fluid p-0">
+
+					<div class="card">
+						<div class="row no-gutters">
+							<div class="col-12 col-lg-5 col-xl-3 border-right">
+
+								<div class="px-4 d-none d-md-block">
+									<div class="media align-items-center">
+										<div class="media-body">
+											<input type="text" class="form-control my-3" placeholder="Search...">
+										</div>
+									</div>
+								</div>
+
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="badge badge-success float-right">5</div>
+									<div class="media">
+										<img src="img/avatars/avatar-5.jpg" class="rounded-circle mr-1"
+											alt="Ashley Briggs" width="40" height="40">
+										<div class="media-body ml-3">
+											Ashley Briggs
+											<div class="small"><span class="fas fa-circle chat-online"></span> Online
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="badge badge-success float-right">2</div>
+									<div class="media">
+										<img src="img/avatars/avatar-2.jpg" class="rounded-circle mr-1"
+											alt="Carl Jenkins" width="40" height="40">
+										<div class="media-body ml-3">
+											Carl Jenkins
+											<div class="small"><span class="fas fa-circle chat-online"></span> Online
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="media">
+										<img src="img/avatars/avatar-3.jpg" class="rounded-circle mr-1"
+											alt="Bertha Martin" width="40" height="40">
+										<div class="media-body ml-3">
+											Bertha Martin
+											<div class="small"><span class="fas fa-circle chat-online"></span> Online
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="media">
+										<img src="img/avatars/avatar-4.jpg" class="rounded-circle mr-1"
+											alt="Stacie Hall" width="40" height="40">
+										<div class="media-body ml-3">
+											Stacie Hall
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="media">
+										<img src="img/avatars/avatar-5.jpg" class="rounded-circle mr-1"
+											alt="Fiona Green" width="40" height="40">
+										<div class="media-body ml-3">
+											Fiona Green
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="media">
+										<img src="img/avatars/avatar-2.jpg" class="rounded-circle mr-1"
+											alt="Doris Wilder" width="40" height="40">
+										<div class="media-body ml-3">
+											Doris Wilder
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="media">
+										<img src="img/avatars/avatar-4.jpg" class="rounded-circle mr-1"
+											alt="Haley Kennedy" width="40" height="40">
+										<div class="media-body ml-3">
+											Haley Kennedy
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="#" class="list-group-item list-group-item-action border-0">
+									<div class="media">
+										<img src="img/avatars/avatar-3.jpg" class="rounded-circle mr-1"
+											alt="Jennifer Chang" width="40" height="40">
+										<div class="media-body ml-3">
+											Jennifer Chang
+											<div class="small"><span class="fas fa-circle chat-offline"></span> Offline
+											</div>
+										</div>
+									</div>
+								</a>
+
+								<hr class="d-block d-lg-none mt-1 mb-0" />
+							</div>
+							<div class="col-12 col-lg-7 col-xl-9">
+								<div class="py-2 px-4 border-bottom d-none d-lg-block">
+									<div class="media align-items-center py-1">
+										<div class="position-relative">
+											<img src="img/avatars/avatar-3.jpg" class="rounded-circle mr-1"
+												alt="Bertha Martin" width="40" height="40">
+										</div>
+										<div class="media-body pl-3">
+											<strong>Bertha Martin</strong>
+											<div class="text-muted small"><em>Typing...</em></div>
+										</div>
+										<div>
+											<button class="btn btn-primary btn-lg mr-1 px-3"><i class="feather-lg"
+													data-feather="phone"></i></button>
+											<button class="btn btn-info btn-lg mr-1 px-3 d-none d-md-inline-block"><i
+													class="feather-lg" data-feather="video"></i></button>
+											<button class="btn btn-light border btn-lg px-3"><i class="feather-lg"
+													data-feather="more-horizontal"></i></button>
+										</div>
+									</div>
+								</div>
+
+								<div class="position-relative">
+									<div class="chat-messages p-4">
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="img/avatars/avatar.jpg" class="rounded-circle mr-1"
+													alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:33 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+												<div class="font-weight-bold mb-1">You</div>
+												Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te
+												vix.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="img/avatars/avatar-3.jpg" class="rounded-circle mr-1"
+													alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:34 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+												<div class="font-weight-bold mb-1">Bertha Martin</div>
+												Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal
+												commodo.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="img/avatars/avatar.jpg" class="rounded-circle mr-1"
+													alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:35 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+												<div class="font-weight-bold mb-1">You</div>
+												Cum ea graeci tractatos.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="img/avatars/avatar-3.jpg" class="rounded-circle mr-1"
+													alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:36 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+												<div class="font-weight-bold mb-1">Bertha Martin</div>
+												Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor
+												magna, vitae commodo lectus mauris et velit. Proin ultricies placerat
+												imperdiet. Morbi varius
+												quam ac venenatis tempus.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="img/avatars/avatar-3.jpg" class="rounded-circle mr-1"
+													alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:37 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+												<div class="font-weight-bold mb-1">Bertha Martin</div>
+												Cras pulvinar, sapien id vehicula aliquet, diam velit elementum orci.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="img/avatars/avatar.jpg" class="rounded-circle mr-1"
+													alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:38 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+												<div class="font-weight-bold mb-1">You</div>
+												Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te
+												vix.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="img/avatars/avatar-3.jpg" class="rounded-circle mr-1"
+													alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:39 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+												<div class="font-weight-bold mb-1">Bertha Martin</div>
+												Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal
+												commodo.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="img/avatars/avatar.jpg" class="rounded-circle mr-1"
+													alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:40 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+												<div class="font-weight-bold mb-1">You</div>
+												Cum ea graeci tractatos.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="img/avatars/avatar.jpg" class="rounded-circle mr-1"
+													alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:41 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+												<div class="font-weight-bold mb-1">You</div>
+												Morbi finibus, lorem id placerat ullamcorper, nunc enim ultrices massa,
+												id dignissim metus urna eget purus.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="img/avatars/avatar-3.jpg" class="rounded-circle mr-1"
+													alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:42 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+												<div class="font-weight-bold mb-1">Bertha Martin</div>
+												Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor
+												magna, vitae commodo lectus mauris et velit. Proin ultricies placerat
+												imperdiet. Morbi varius
+												quam ac venenatis tempus.
+											</div>
+										</div>
+
+										<div class="chat-message-right pb-4">
+											<div>
+												<img src="img/avatars/avatar.jpg" class="rounded-circle mr-1"
+													alt="Chris Wood" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:43 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+												<div class="font-weight-bold mb-1">You</div>
+												Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te
+												vix.
+											</div>
+										</div>
+
+										<div class="chat-message-left pb-4">
+											<div>
+												<img src="img/avatars/avatar-3.jpg" class="rounded-circle mr-1"
+													alt="Bertha Martin" width="40" height="40">
+												<div class="text-muted small text-nowrap mt-2">2:44 am</div>
+											</div>
+											<div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+												<div class="font-weight-bold mb-1">Bertha Martin</div>
+												Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal
+												commodo.
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="flex-grow-0 py-3 px-4 border-top">
+									<div class="input-group">
+										<input type="text" class="form-control" placeholder="Type your message">
+										<div class="input-group-append">
+											<button class="btn btn-primary">Send</button>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</main>
+
+			<footer class="footer">
+				<div class="container-fluid">
+					<div class="row text-muted">
+						<div class="col-6 text-left">
+							<ul class="list-inline">
+								<li class="list-inline-item">
+									<a class="text-muted" href="#">Made with
+										<i class="fas fa-heart" style="color: red;"></i>
+										by Nigel Msipa </a>
+								</li>
+
+							</ul>
+						</div>
+						<div class="col-6 text-right">
+							<p class="mb-0">
+								&copy; 2020 - <a href="index.html" class="text-muted">Aspire</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+
+
+</body>
+
+</html>
