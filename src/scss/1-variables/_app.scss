@@ -51,8 +51,8 @@ $blue:    #5b7dff !default;
 $red:     #f44455 !default;
 $yellow:  #fcc100 !default;
 $green:   #5fc27e !default;
-$cyan:    #47BAC1 !default;
-$pink:    #a180da !default;
+$ftblue:    #04619F !default;
+$ftgreen:    #3BB78F !default;
 
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -66,8 +66,8 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$primary:          $cyan !default;
-$secondary:        $pink !default;
+$primary:          $ftgreen !default;
+$secondary:        $ftblue !default;
 $tertiary:         $green !default;
 $success:          $green !default;
 $info:             $blue !default;
@@ -212,7 +212,8 @@ $table-accent-bg: $gray-100 !default;
 // Sidebar general
 $sidebar-width: 260px !default;
 $sidebar-transition: margin-left .35s ease-in-out, left .35s ease-in-out !default;
-$sidebar-bg: $dark !default;
+$sidebar-bg: $ftgreen
+!default;
 $sidebar-border: 0 !default;
 
 // Sidebar brand
@@ -225,14 +226,14 @@ $sidebar-brand-icon-color: $primary !default;
 
 // Sidebar header
 $sidebar-header-padding: 1.125rem 1.5rem 0.375rem !default;
-$sidebar-header-color: $gray-500 !default;
+$sidebar-header-color: $white !default;
 $sidebar-header-text-transform: none !default;
 $sidebar-header-font-size: $font-size-sm !default;
 
 // Sidebar link
 $sidebar-link-padding: .7rem 1.5rem !default;
 $sidebar-link-font-weight: 400 !default;
-$sidebar-link-color: rgba($white, 0.7) !default;
+$sidebar-link-color: $white!default;
 $sidebar-link-bg: $sidebar-bg !default;
 $sidebar-link-hover-color: rgba($white, 0.9) !default;
 $sidebar-link-hover-bg: darken($sidebar-bg, 4) !default;
@@ -245,7 +246,7 @@ $sidebar-link-active-font-weight: $font-weight-normal !default;
 // Sidebar child link
 $sidebar-link-child-padding: .55rem 1.5rem .55rem 3.55rem !default;
 $sidebar-link-child-font-weight: 400 !default;
-$sidebar-link-child-color: rgba($white, 0.55) !default;
+$sidebar-link-child-color: $white!default;
 $sidebar-link-child-bg: darken($sidebar-bg, 2) !default;
 $sidebar-link-child-hover-color: rgba($white, 0.9) !default;
 $sidebar-link-child-hover-bg: darken($sidebar-bg, 4) !default;
