@@ -21,6 +21,7 @@
 </head>
 
 <body>
+
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar">
 			<div class="sidebar-content ">
@@ -198,27 +199,167 @@
 			</nav>
 
 			<main class="content">
-				<div class="container-fluid p-0">
-
-					<div class=" d-flex align-items-center justify-content-center mt-5 mb-5">
-						<div class="card text-center" style="width:50em;">
-							<img class="card-img-top" src="/src/img/photos/undraw_Portfolio_update_re_jqnp (2).svg">
-							<div class=" card-header">
-								<a href="/docs/intake-form-2.htmls">
-									<h5 class="card-title mb-0">Send Intake Form</h5>
+				<div class="container-fluid p-0 d-flex flex-row overflow-auto ">
+					<div class="px-3">
+						<div class="card card-hover" style="width: 18rem;">
+							<img class="card-img-top" src="/src/img/photos/blo.svg" alt="Card image cap">
+							<ul class="list-group list-group-flush">
+								<a href="client-info.html">
+									<li class="list-group-item ">Client Info</li>
 								</a>
-							</div>
-							<div class="card-body">
-								<p class="card-text">The first step in creating a killer exersice-program is collecting
-									all the relavant information.</p>
-								<input type="email" class="form-control mb-2" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter email">
-								<a href="#" class="btn btn-primary btn-block">Send email</a>
-							</div>
+								<a href="exersice-prescription.html">
+									<li class="list-group-item ">Exercise Prescription </li>
+								</a>
+								<a href="progression-key.html">
+									<li class="list-group-item ">Progression key</li>
+								</a>
+								<a href="workout-log.html">
+									<li class="list-group-item ">Workout Log </li>
+								</a>
+								<a href="workout-log.html">
+									<li class="list-group-item active">Homework </li>
+								</a>
+								<a href="workout-log.html">
+									<li class="list-group-item">Statistics </li>
+								</a>
+								<a href="workout-log.html">
+									<li class="list-group-item">Archive </li>
+								</a>
+							</ul>
 						</div>
 					</div>
+					<!-- Card -->
+					<div class="card">
+						<div class="card-header">
+
+						</div>
+
+						<!-- Table -->
+						<div class="table-responsive">
+							<table id="basicDatatable"
+								class="table table-borderless table-thead-bordered table-nowrap table-align-middle card-table"
+								data-hs-datatables-options='{
+			   "order": []
+			 }'>
+								<thead class="thead-light">
+									<tr>
+										<th>Name</th>
+										<th>Position</th>
+
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>
+											<a class="media align-items-center" href="../user-profile.html">
+												<div class="avatar avatar-circle mr-3">
+
+												</div>
+												<div class="media-body">
+													<span class="d-block h5 text-hover-primary mb-0">Amanda Harvey <i
+															class="tio-verified text-primary" data-toggle="tooltip"
+															data-placement="top" title="Top endorsed"></i></span>
+													<span
+														class="d-block font-size-sm text-body">amanda@example.com</span>
+												</div>
+											</a>
+										</td>
+										<td>
+											<span class="d-block h5 mb-0">Director</span>
+											<span class="d-block font-size-sm">Human resources</span>
+										</td>
+
+									</tr>
+
+									<tr>
+										<td>
+											<a class="media align-items-center" href="../user-profile.html">
+												<div class="avatar avatar-soft-primary avatar-circle mr-3">
+												</div>
+												<div class="media-body">
+													<span class="d-block h5 text-hover-primary mb-0">Anne Richard</span>
+													<span class="d-block font-size-sm text-body">anne@example.com</span>
+												</div>
+											</a>
+										</td>
+										<td>
+											<span class="d-block h5 mb-0">Seller</span>
+											<span class="d-block font-size-sm">Branding products</span>
+										</td>
+
+									</tr>
+
+									<tr>
+										<td>
+											<a class="media align-items-center" href="../user-profile.html">
+												<div class="avatar avatar-circle mr-3">
+
+												</div>
+												<div class="media-body">
+													<span class="d-block h5 text-hover-primary mb-0">David
+														Harrison</span>
+													<span
+														class="d-block font-size-sm text-body">david@example.com</span>
+												</div>
+											</a>
+										</td>
+										<td>
+											<span class="d-block h5 mb-0">Unknown</span>
+											<span class="d-block font-size-sm">Unknown</span>
+										</td>
+
+									</tr>
+
+									<tr>
+										<td>
+											<a class="media align-items-center" href="../user-profile.html">
+												<div class="avatar avatar-circle mr-3">
+
+												</div>
+												<div class="media-body">
+													<span class="d-block h5 text-hover-primary mb-0">Finch Hoot</span>
+													<span
+														class="d-block font-size-sm text-body">finch@example.com</span>
+												</div>
+											</a>
+										</td>
+										<td>
+											<span class="d-block h5 mb-0">Designer</span>
+											<span class="d-block font-size-sm">IT department</span>
+										</td>
+
+									</tr>
+
+									<tr>
+										<td>
+											<a class="media align-items-center" href="../user-profile.html">
+												<div class="avatar avatar-soft-dark avatar-circle mr-3">
+												</div>
+												<div class="media-body">
+													<span class="d-block h5 text-hover-primary mb-0">Bob Dean</span>
+													<span class="d-block font-size-sm text-body">bob@example.com</span>
+												</div>
+											</a>
+										</td>
+										<td>
+											<span class="d-block h5 mb-0">Executive director</span>
+											<span class="d-block font-size-sm">Marketing</span>
+										</td>
+
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- End Table -->
+					</div>
+					<!-- End Card -->
+
+
 
 				</div>
+
+
 			</main>
 
 			<footer class="footer">
