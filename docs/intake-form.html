@@ -17,465 +17,864 @@
 	<!-- <link href="css/corporate.css" rel="stylesheet"> -->
 	<!-- <link href="css/modern.css" rel="stylesheet"> -->
 
-	<!-- BEGIN SETTINGS -->
-	<!-- You can remove this after picking a style -->
+	<link rel="stylesheet" href="">
+	<style>
+		.sw-main {
+			position: relative;
+			display: block;
+			margin: 0;
+			padding: 0;
+			border-radius: .25rem !important;
+		}
+
+		.sw-main .sw-container {
+			display: block;
+			margin: 0;
+			padding: 0;
+			position: relative;
+		}
+
+		.sw-main .step-content {
+			display: none;
+			position: relative;
+			margin: 0;
+		}
+
+		.sw-main .sw-toolbar {
+			margin-left: 0;
+		}
+
+		/* SmartWizard Theme: White */
+		.sw-theme-default {
+			box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+		}
+
+		.sw-theme-default .sw-container {
+			min-height: 250px;
+		}
+
+		.sw-theme-default .step-content {
+			padding: 10px;
+			border: 0px solid #D4D4D4;
+			background-color: #FFF;
+			text-align: left;
+		}
+
+		.sw-theme-default .sw-toolbar {
+			background: #f9f9f9;
+			border-radius: 0 !important;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding: 10px;
+			margin-bottom: 0 !important;
+		}
+
+		.sw-theme-default .sw-toolbar-top {
+			border-bottom-color: #ddd !important;
+		}
+
+		.sw-theme-default .sw-toolbar-bottom {
+			border-top-color: #ddd !important;
+		}
+
+		.sw-theme-default>ul.step-anchor>li {
+			position: relative;
+			margin-right: 2px;
+		}
+
+		.sw-theme-default>ul.step-anchor>li>a,
+		.sw-theme-default>ul.step-anchor>li>a:hover {
+			border: none !important;
+			color: #bbb;
+			text-decoration: none;
+			outline-style: none;
+			background: transparent !important;
+			border: none !important;
+			cursor: not-allowed;
+		}
+
+		.sw-theme-default>ul.step-anchor>li.clickable>a:hover {
+			color: #4285F4 !important;
+			background: transparent !important;
+			cursor: pointer;
+		}
+
+		.sw-theme-default>ul.step-anchor>li>a::after {
+			content: "";
+			background: #4285F4;
+			height: 2px;
+			position: absolute;
+			width: 100%;
+			left: 0px;
+			bottom: 0px;
+			transition: all 250ms ease 0s;
+			transform: scale(0);
+		}
+
+		.sw-theme-default>ul.step-anchor>li.active>a {
+			border: none !important;
+			color: #4285F4 !important;
+			background: transparent !important;
+			cursor: pointer;
+		}
+
+		.sw-theme-default>ul.step-anchor>li.active>a::after {
+			transform: scale(1);
+		}
+
+		.sw-theme-default>ul.step-anchor>li.done>a {
+			border: none !important;
+			color: #000 !important;
+			background: transparent !important;
+			cursor: pointer;
+		}
+
+		.sw-theme-default>ul.step-anchor>li.done>a::after {
+			background: #5cb85c;
+			transform: scale(1);
+		}
+
+		.sw-theme-default>ul.step-anchor>li.danger>a {
+			border: none !important;
+			color: #d9534f !important;
+			/* background: #d9534f !important; */
+			cursor: pointer;
+		}
+
+		.sw-theme-default>ul.step-anchor>li.danger>a::after {
+			background: #d9534f;
+			border-left-color: #f8d7da;
+			transform: scale(1);
+		}
+
+		.sw-theme-default>ul.step-anchor>li.disabled>a,
+		.sw-theme-default>ul.step-anchor>li.disabled>a:hover {
+			color: #eee !important;
+			cursor: not-allowed;
+		}
+
+		/* Responsive CSS */
+		@media screen and (max-width: 768px) {
+			.sw-theme-default>.nav-tabs>li {
+				float: none !important;
+			}
+		}
+
+		/* Common Loader */
+		.sw-loading::after {
+			position: absolute;
+			display: block;
+			opacity: 1;
+			content: "";
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background: rgba(255, 255, 255, .7);
+			transition: all .2s ease;
+			z-index: 2;
+		}
+
+		.sw-loading::before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 10;
+			border: 10px solid #f3f3f3;
+			border-radius: 50%;
+			border-top: 10px solid #3498db;
+			width: 80px;
+			height: 80px;
+			margin-top: -40px;
+			margin-left: -40px;
+			-webkit-animation: spin 1s linear infinite;
+			/* Safari */
+			animation: spin 1s linear infinite;
+		}
+
+		/* Safari */
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
 
 </head>
 
 <body>
-	<main class="main d-flex justify-content mt-5 ">
-		<div class="container">
+	<div class="wrapper">
+		<div class="main">
+			<main class="content">
+				<div class="container  ">
 
 
 
 
+					<div class="row justify-content-center">
 
-			<div id="smartwizard-arrows-primary" class="wizard wizard-primary mb-4" style="max-width: 1000px;">
-				<ul>
-					<li><a href="#arrows-primary-step-1">Contact Information<br /><small>Step
-								description</small></a></li>
-					<li><a href="#arrows-primary-step-2">Goal Setting<br /><small>Step
-								description</small></a></li>
-					<li><a href="#arrows-primary-step-3">Behavior change <br /><small>Step
-								description</small></a></li>
-					<li><a href="#arrows-primary-step-4">Exercise Attitudes <br /><small>Step
-								description</small></a></li>
-					<li><a href="#arrows-primary-step-5">Individual Differences <br /><small>Step
-								description</small></a></li>
-					<li><a href="#arrows-primary-step-6">Fatigue Managment <br /><small>Step
-								description</small></a></li>
+						<div class="col-10">
+							<h1 class="display-5 text-primary text-center ">Intake Form</h1>
+							<div id="smartwizard-arrows-primary" class="wizard wizard-primary mb-4">
+								<ul>
+									<li><a href="#arrows-primary-step-1">Contact Info <br /><small>Step
+												one</small></a></li>
+									<li><a href="#arrows-primary-step-2">Goal Setting <br /><small>Step
+												two</small></a></li>
+									<li><a href="#arrows-primary-step-3">
+											Adherence
+											<br /><small>Step
+												three</small></a></li>
+									<li><a href="#arrows-primary-step-4">Exercise History <br /><small>Step
+												four</small></a></li>
+									<li><a href="#arrows-primary-step-5">Individual Differences
+											<br /><small>Step
+												five</small></a></li>
+									<li><a href="#arrows-primary-step-6"> Fatigue Managment
+											<br /><small>Step
+												six</small></a></li>
+									<li><a href="#arrows-primary-step-7"> Extra
+											<br /><small>Step
+												seven</small></a></li>
 
-				</ul>
+								</ul>
 
-				<div>
-					<div id="arrows-primary-step-1" class="">
-						<form>
-							<div id="validation-step-1">
-								<div class="form-group">
-									<label class="form-label">Full Name
-										<span class="text-danger">*</span>
-									</label>
-									<input name="wizard-userName" type="text" class="form-control "
-										placeholder="First Last">
-								</div>
-								<div class="form-group">
-									<label class="form-label">Phone Number
-										<span class="text-danger">*</span>
-									</label>
-									<input name="wizard-password" type="text" class="form-control "
-										placeholder="703-000-000">
-								</div>
-								<div class="form-group mb-0">
-									<label class="form-label">Email Adress
-										<span class="text-danger">*</span>
-									</label>
-									<input name="wizard-confirm" type="email" class="form-control "
-										placeholder="Example@email.com">
-								</div>
-							</div>
+								<div>
+									<div id="arrows-primary-step-1" class="">
 
+										<form>
+											<h1 class="text-primary">Contact infomation</h1>
+											<div class="form-group">
+												<label class="form-label">Full Name
+													<span class="text-danger">*</span>
+												</label>
+												<input type="text" class="form-control" placeholder="First Last">
+											</div>
+											<div class="form-group">
+												<label class="form-label">Phone Number
+													<span class="text-danger">*</span>
+												</label>
 
-						</form>
-					</div>
-					<div id="arrows-primary-step-2" class="">
-						<form>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Specific
-									<span class="text-danger">*</span>
-								</label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="  ">
-								<small id="emailHelp" class="form-text text-muted">Instead of saying I want to get fit,
-									one might say I want to lose 10 pounds. </small>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Measurable
-									<span class="text-danger">*</span>
-								</label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="  ">
-								<small id="emailHelp" class="form-text text-muted">How will I know I have achieved this
-									goal and what metrics or data targets can I use? </small>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Attainable <span class="text-danger">*</span> </label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="">
-								<small id="emailHelp" class="form-text text-muted">Make your case as to why this goal is
-									within your scope and what obstacles are you likely to encounter?</small>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Relevant <span class="text-danger">*</span> </label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder=" ">
-								<small id="emailHelp" class="form-text text-muted">What beyond the first level of
-									consequences is driving you to achieve this goal?</small>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">Timely <span class="text-danger">*</span></label>
-								<input type="date" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp" placeholder="Enter email">
-								<small id="emailHelp" class="form-text text-muted">What is the specific deadline or
-									timeframe? </small>
-							</div>
+												<input type="tel" class="form-control" placeholder="000-000-0000">
 
-						</form>
-					</div>
-					<div id="arrows-primary-step-3" class="">
-						<form>
-							<div class="form-group">
-								How confident are you that you can achieve this goal which I've set for yourself? <br>
-								<label for="" class="mt-2 ">Doubtful</label>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio1" value="option1">
-									<label class="form-check-label" for="inlineRadio1">1</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio2" value="option2">
-									<label class="form-check-label" for="inlineRadio2">2</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio3" value="option3">
-									<label class="form-check-label" for="inlineRadio3">3</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio4" value="option4">
-									<label class="form-check-label" for="inlineRadio3">4</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio4" value="option4">
-									<label class="form-check-label" for="inlineRadio3">5</label>
-								</div>
-								<label for="">Certain</label>
-							</div>
-							<div class="form-group">
-								How important is it to you to achieve this goal?<br>
-								<label for="">Trivial</label>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio1" value="option1">
-									<label class="form-check-label" for="inlineRadio1">1</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio2" value="option2">
-									<label class="form-check-label" for="inlineRadio2">2</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio3" value="option3">
-									<label class="form-check-label" for="inlineRadio3">3</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio4" value="option4">
-									<label class="form-check-label" for="inlineRadio3">4</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio4" value="option4">
-									<label class="form-check-label" for="inlineRadio3">5</label>
-								</div>
-								<label for="">Critical</label>
-							</div>
-							<div class="form-group">
-								Given the current deadline, how likely are you to maintain your focus until attainment?
-								<br>
-								<label for="">Doubtful</label>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio1" value="option1">
-									<label class="form-check-label" for="inlineRadio1">1</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio2" value="option2">
-									<label class="form-check-label" for="inlineRadio2">2</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio3" value="option3">
-									<label class="form-check-label" for="inlineRadio3">3</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio4" value="option4">
-									<label class="form-check-label" for="inlineRadio3">4</label>
-								</div>
-								<div class="form-check form-check-inline">
-									<input class="form-check-input" type="radio" name="inlineRadioOptions"
-										id="inlineRadio4" value="option4">
-									<label class="form-check-label" for="inlineRadio3">5</label>
-								</div>
-								<label for="">Certain</label>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">What is the number one positive benefit achieving this
-									goal bring to your life? </label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp">
-								<small id="emailHelp" class="form-text text-muted"></small>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">What do you believe is true about yourself that will
-									keep you from achieving this goal? </label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp">
-								<small id="emailHelp" class="form-text text-muted"></small>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">What do you think is the biggest obstacle that you will
-									encounter in pursuit of this goal? </label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp">
-								<small id="emailHelp" class="form-text text-muted"></small>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1">How will you overcome this obstacle if you encounter it?
-									If____ then ____. </label>
-								<input type="email" class="form-control" id="exampleInputEmail1"
-									aria-describedby="emailHelp">
-								<small id="emailHelp" class="form-text text-muted"></small>
-							</div>
-						</form>
-					</div>
-					<div id="arrows-primary-step-4" class="">
-						<form>
-							<div class="form-group">
-								<label for="exampleInputEmail1"> Do you have any negative feelings toward, or have you
-									had any bad experience with, cardiovascular exercise?</label>
+											</div>
+											<div class="form-group">
+												<label class="form-label">Email address
+													<span class="text-danger">*</span>
+												</label>
+												<input type="email" class="form-control" placeholder="Email">
+											</div>
 
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios1" value="option1" checked>
-									<label class="form-check-label" for="exampleRadios1">
-										Yes
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios2" value="option2">
-									<label class="form-check-label" for="exampleRadios2">
-										No
-									</label>
-								</div>
-								<div class="form-group row">
+										</form>
 
-									<div class="col-sm-10">
-										<input type="email" class="form-control" id="inputEmail3" placeholder="Other">
 									</div>
-								</div>
-							</div>
+									<div id="arrows-primary-step-2" class="">
+										<form>
+											<h1 class="text-primary">Goal Setting</h1>
+											<div class="form-group">
+												<label for="Specific">Specific
+													<span class="text-danger">*</span>
+												</label>
+												<input type="text" class="form-control" id="Specific-goal"
+													aria-describedby="inputHelp" placeholder="  ">
+												<small id="Specific-goal" class="form-text text-muted">Instead of saying
+													I
+													want
+													to ge fit, one might say I want to lose 10 pounds. </small>
+											</div>
+											<div class="form-group">
+												<label for="Measurable">Measurable
+													<span class="text-danger">*</span>
+												</label>
+												<input type="text" class="form-control" id="Measurable-goal"
+													aria-describedby="inputHelp" placeholder="  ">
+												<small id="Measurable-goal" class="form-text text-muted">How will I know
+													I
+													have
+													achieved this goal and what metrics or data targets can I use?
+												</small>
+											</div>
+											<div class="form-group">
+												<label for="Attainable">Attainable
+													<span class="text-danger">*</span>
+												</label>
+												<input type="text" class="form-control" id="Attainable-goal"
+													aria-describedby="inputHelp" placeholder="  ">
+												<small id="Attainable-goal" class="form-text text-muted">Why is this an
+													achievable goal for me?
+												</small>
+											</div>
+											<div class="form-group">
+												<label for="Relevant">Relevant
+													<span class="text-danger">*</span>
+												</label>
+												<input type="text" class="form-control" id="Relevant-goal"
+													aria-describedby="inputHelp" placeholder="  ">
+												<small id="Relevant-goal" class="form-text text-muted">What beyond the
+													first
+													level of consequences is driving me to achieve this goal?
+												</small>
+											</div>
 
-							<div class="form-group">
-								<label for="exampleInputEmail1"> Do you have any negative feelings toward, or have you
-									had any bad experience with, Resistance training? </label>
+											<div class="form-group">
+												<label for="Timely">Timely <span class="text-danger">*</span></label>
+												<input type="date" class="form-control" id="Timely"
+													aria-describedby="inputHelp">
+												<small id="emailHelp" class="form-text text-muted">What is the specific
+													deadline
+													or
+													timeframe? </small>
+											</div>
 
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios1" value="option1" checked>
-									<label class="form-check-label" for="exampleRadios1">
-										Yes
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios2" value="option2">
-									<label class="form-check-label" for="exampleRadios2">
-										No
-									</label>
-								</div>
-								<div class="form-group row">
-
-									<div class="col-sm-10">
-										<input type="email" class="form-control" id="inputEmail3" placeholder="Other">
+										</form>
 									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1"> Do you have any negative feelings toward, or have you
-									had any bad experience with, fitness testing and evaluation? </label>
+									<div id="arrows-primary-step-3" class="">
+										<form>
+											<h1 class="text-primary">Behavior change and Adherence </h1>
+											<div class="form-group">
+												How confident are you that you can achieve this goal? <span
+													class="text-danger">*</span>
+												<br>
+												<div class="d-flex justify-content-start my-4">
+													<div class="" style="width: 100%;">
+														<input type="range" class="custom-range" id="confident" min="0"
+															max="10" step="1">
+													</div>
+													<span class="font-weight-bold text-primary ml-2 confident"></span>
+												</div>
 
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios1" value="option1" checked>
-									<label class="form-check-label" for="exampleRadios1">
-										Yes
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios2" value="option2">
-									<label class="form-check-label" for="exampleRadios2">
-										No
-									</label>
-								</div>
-								<div class="form-group row">
+											</div>
+											<div class="form-group">
+												How important is it to you to achieve this goal? <span
+													class="text-danger">*</span>
+												<br>
+												<div class="d-flex justify-content-start my-4">
+													<div class="" style="width: 100%;">
+														<input type="range" class="custom-range" id="important" min="0"
+															max="10" step="1">
+													</div>
+													<span class="font-weight-bold text-primary ml-2 important"></span>
+												</div>
 
-									<div class="col-sm-10">
-										<input type="email" class="form-control" id="inputEmail3" placeholder="Other">
+											</div>
+											<div class="form-group">
+												Given the current deadline, how likely are you to maintain your focus
+												until
+												attainment? <span class="text-danger">*</span>
+												<br>
+												<div class="d-flex justify-content-start my-4">
+													<div class="" style="width: 100%;">
+														<input type="range" class="custom-range" id="focus" min="0"
+															max="10" step="1">
+													</div>
+													<span class="font-weight-bold text-primary ml-2 focus"></span>
+												</div>
+
+											</div>
+											<div class="form-group">
+												<label class="form-label">What do you believe is true about yourself
+													that
+													will
+													keep you from achieving this goal? <span
+														class="text-danger">*</span></label>
+												<input type="text" class="form-control" placeholder=" ">
+											</div>
+											<div class="form-group">
+												<label class="form-label">What do you think is the biggest obstacle that
+													you
+													will encounter in pursuit of this goal? <span
+														class="text-danger">*</span>
+												</label>
+												<input type="text" class="form-control" placeholder=" ">
+											</div>
+											<div class="form-group">
+												<label class="form-label">How will you overcome this obstacle if you
+													encounter
+													it? <span class="text-danger">*</span></label>
+												<input type="text" class="form-control" placeholder=" ">
+											</div>
+
+										</form>
 									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1"> Are you willing to devote at least 75 min a week
-									towards cardiovascular exercise? </label>
+									<div id="arrows-primary-step-4" class="">
+										<form>
+											<h1 class="text-primary">Exercise History and Attitude</h1>
+											<div class="form-group">
+												<label for="">Do you have any negative feelings toward, or have you had
+													any
+													bad
+													experience
+													with, cardiovascular exercise?</label>
 
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios1" value="option1" checked>
-									<label class="form-check-label" for="exampleRadios1">
-										Yes
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios2" value="option2">
-									<label class="form-check-label" for="exampleRadios2">
-										No
-									</label>
-								</div>
-								<div class="form-group row">
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Yes</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">No
+													</span>
+												</label>
+											</div>
+											<div class="form-group">
+												<label for="">Do you have any negative feelings toward, or have you had
+													any
+													bad
+													experience with, Resistance training?
+												</label>
 
-									<div class="col-sm-10">
-										<input type="email" class="form-control" id="inputEmail3" placeholder="Other">
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Yes</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">No
+													</span>
+												</label>
+											</div>
+											<div class="form-group">
+												<label for="">Do you have any negative feelings toward, or have you had
+													any
+													bad
+													experience with, fitness testing and evaluation?
+												</label>
+
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Yes</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">No
+													</span>
+												</label>
+											</div>
+											<div class="form-group">
+												<label for="">Are you willing to devote at least 75 min a week towards
+													cardiovascular exercise?
+												</label>
+
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Yes</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">No
+													</span>
+												</label>
+											</div>
+											<div class="form-group">
+												<label for="">Are you willing to devote at least 2 days a week towards
+													resistance training ?
+												</label>
+
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Yes</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">No
+													</span>
+												</label>
+											</div>
+
+										</form>
 									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1"> Are you willing to devote at least 2 days a week
-									towards resistance training ? </label>
+									<div id="arrows-primary-step-5" class="">
+										<form>
+											<h1 class="text-primary">Individual Differences
+											</h1>
+											<div class="form-group">
+												<label for="input-group-example">Weight in pounds:</label>
+												<input type="number" class="form-control" id="input-group-example"
+													aria-describedby="input-group-example" placeholder=" ">
+												<small id="input-group-help" class="form-text text-muted"></small>
+											</div>
+											<div class="form-group">
+												<label for="input-group-example">Height in Inches:</label>
+												<input type="number" class="form-control" id="input-group-example"
+													aria-describedby="input-group-example" placeholder=" ">
+												<small id="input-group-help" class="form-text text-muted"></small>
+											</div>
+											<div class="form-group">
+												<label class="form-label">Birthday </label>
+												<div class="input-group date" id="datetimepicker-date"
+													data-target-input="nearest">
+													<input type="text" class="form-control datetimepicker-input"
+														data-target="#datetimepicker-date" />
+													<div class="input-group-append" data-target="#datetimepicker-date"
+														data-toggle="datetimepicker">
+														<div class="input-group-text"><i class="fa fa-calendar"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="">How much experience do you have with Resistance Training?
 
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios1" value="option1" checked>
-									<label class="form-check-label" for="exampleRadios1">
-										Yes
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios2" value="option2">
-									<label class="form-check-label" for="exampleRadios2">
-										No
-									</label>
-								</div>
-								<div class="form-group row">
+												</label>
 
-									<div class="col-sm-10">
-										<input type="email" class="form-control" id="inputEmail3" placeholder="Other">
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">No previous experience</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label"> Some previous experience (6-12
+														months
+														)
+													</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label"> Significant previous experience
+														(12
+														months+)
+													</span>
+												</label>
+											</div>
+											<div class="form-group mt-3">
+												<label for="">
+													<h5>Do you now have, or have you had in the past? [SELECT ALL THAT
+														APPLY]</h5>
+
+
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">History of heart problems, chest
+														pain, or
+														stroke </span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label"> Elevated blood pressure</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">Any chronic illness or condition
+													</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label"> Difficulty with physical
+														exercise
+													</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label"> Advice from physician not to
+														exercise</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label"> Recent surgery (last 12
+														months)</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">Pregnancy (now or within last 3
+														months)
+													</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">History of breathing or lung
+														problems
+													</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">Muscle, joint, or back disorder,
+														or
+														any
+														previous injury still affecting you </span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">Diabetes or metabolic
+														syndrome</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">Thyroid condition </span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">Cigarette smoking habit</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">Elevated blood cholesterol</span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">History of heart problems in
+														immediate
+														family </span>
+												</label>
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">Hernia, or any condition that may
+														be
+														aggravated by lifting weights or other physical activity </span>
+												</label>
+
+											</div>
+
+
+										</form>
 									</div>
+									<div id="arrows-primary-step-6" class="">
+										<form>
+											<h1 class="text-primary">Fatigue Manegement
+											</h1>
+											<div class="form-group">
+												Rank your average stress levels
+												<span class="text-danger">*</span>
+												<br>
+												<div class="d-flex justify-content-start my-4">
+													<div class="" style="width: 100%;">
+														<input type="range" class="custom-range" id="confident" min="0"
+															max="10" step="1">
+													</div>
+													<span class="font-weight-bold text-primary ml-2 confident"></span>
+												</div>
+
+											</div>
+											<div class="form-group">
+												Rank your average sleep quality
+												<span class="text-danger">*</span>
+												<br>
+												<div class="d-flex justify-content-start my-4">
+													<div class="" style="width: 100%;">
+														<input type="range" class="custom-range" id="confident" min="0"
+															max="10" step="1">
+													</div>
+													<span class="font-weight-bold text-primary ml-2 confident"></span>
+												</div>
+
+											</div>
+											<div class="form-group">
+												<label for=""> Do you have any negative feelings toward, or have you had
+													any
+													bad
+													experience with your diet and nutrition?</label>
+
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Yes</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">No
+													</span>
+												</label>
+											</div>
+											<div class="form-group">
+												<label for=""> How likely are you to take into account the nutrition
+													facts
+													of
+													food products before consuming them?
+												</label>
+
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Always</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Sometimes
+
+													</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Never
+
+
+													</span>
+												</label>
+											</div>
+											<div class="form-group">
+												<label for=""> How frequently do you drink alcoholic beverages?
+												</label>
+
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Always</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Sometimes
+
+													</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Never
+
+
+													</span>
+												</label>
+											</div>
+											<div class="form-group">
+												<label for="">How often do you drink the recommended 8 8-ounce glasses
+													of
+													water
+													a day?
+												</label>
+
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Always</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Sometimes
+
+													</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Never
+
+
+													</span>
+												</label>
+											</div>
+											<div class="form-group">
+												<label for=""> How would you categorize your daily activity level
+												</label>
+
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Sedentary (little or no
+														exercise)</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Lightly active (light
+														exercise/sports
+														1-3
+														days/week)
+													</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Moderately active (moderate
+														exercise/sports 3-5 days/week)
+
+													</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Very active (hard exercise/sports
+														6-7
+														days a week)
+
+													</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label">Extra active (very hard
+														exercise/sports &
+														physical job or 2x training)
+
+													</span>
+												</label>
+											</div>
+										</form>
+									</div>
+									<div id="arrows-primary-step-7" class="">
+										<form>
+											<h1 class="text-primary">Extra</h1>
+											<div class="form-group ">
+												<label>Is there something else you
+													would like to tell us?</label>
+												<div>
+													<textarea class="form-control" placeholder="" rows="3"></textarea>
+												</div>
+											</div>
+
+
+										</form>
+									</div>
+
 								</div>
 							</div>
 
-						</form>
-					</div>
-					<div id="arrows-primary-step-5" class="">
-						<form>
-							<div class="form-group ">
-								<label for="example-number-input" class=" col-form-label">Weight in pounds </label>
-								<div class="">
-									<input class="form-control" type="number" value="" id="example-number-input">
-								</div>
-							</div>
-							<div class="form-group ">
-								<label for="example-number-input" class="col-form-label">Height in inches </label>
-								<div class="">
-									<input class="form-control" type="number" value="" id="example-number-input">
-								</div>
-							</div>
-							<div class="form-group ">
-								<label for="example-date-input" class=" col-form-label">Birthday </label>
-								<div class="">
-									<input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="exampleInputEmail1"> Fitness level </label>
 
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios1" value="option1" checked>
-									<label class="form-check-label" for="exampleRadios1">
-										Begginer
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios2" value="option2">
-									<label class="form-check-label" for="exampleRadios2">
-										Intermediate
-									</label>
-								</div>
-								<div class="form-check">
-									<input class="form-check-input" type="radio" name="exampleRadios"
-										id="exampleRadios2" value="option2">
-									<label class="form-check-label" for="exampleRadios2">
-										Advanced
-									</label>
-								</div>
+						</div>
 
-							</div>
-						</form>
+
 					</div>
-					<div id="arrows-primary-step-6" class="">
-						<form>
-							<div class="form-group">
-								<label for="exampleFormControlInput1">Email address</label>
-								<input type="email" class="form-control" id="exampleFormControlInput1"
-									placeholder="name@example.com">
-							</div>
-							<div class="form-group">
-								<label for="exampleFormControlSelect1">Example select</label>
-								<select class="form-control" id="exampleFormControlSelect1">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="exampleFormControlSelect2">Example multiple select</label>
-								<select multiple class="form-control" id="exampleFormControlSelect2">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="exampleFormControlTextarea1">Example textarea</label>
-								<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-							</div>
-						</form>
-					</div>
-					<div id="arrows-primary-step-7" class="">
-						Step Content 7
-					</div>
+
 				</div>
-			</div>
-
-
-
+			</main>
 		</div>
+	</div>
 
-		</div>
-	</main>
-
-	<script src="js/app.js"></script>
+	<script src="js/app.js">
+	</script>
 
 	<script>
+
+
+
+
 		$(function () {
 			$("#smartwizard-default-primary").smartWizard({
 				theme: "default",
-				showStepURLhash: false
+				showStepURLhash: true
 			});
 			$("#smartwizard-default-success").smartWizard({
 				theme: "default",
@@ -547,6 +946,37 @@
 				}
 				alert("Great! The form is valid and ready to submit.");
 				return false;
+			});
+		});
+
+		$(document).ready(function () {
+
+			const $valueSpan = $('.confident',);
+			const $value = $('#confident');
+			$valueSpan.html($value.val());
+			$value.on('input change', () => {
+
+				$valueSpan.html($value.val());
+			});
+		});
+		$(document).ready(function () {
+
+			const $valueSpan = $('.focus');
+			const $value = $('#focus');
+			$valueSpan.html($value.val());
+			$value.on('input change', () => {
+
+				$valueSpan.html($value.val());
+			});
+		});
+		$(document).ready(function () {
+
+			const $valueSpan = $('.important');
+			const $value = $('#important');
+			$valueSpan.html($value.val());
+			$value.on('input change', () => {
+
+				$valueSpan.html($value.val());
 			});
 		});
 	</script>

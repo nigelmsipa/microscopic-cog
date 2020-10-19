@@ -65,6 +65,7 @@
     "dragula": "3.7.2",
     "feather-icons": "4.28.0",
     "fullcalendar": "5.1.0",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "3.5.1",
     "jquery-mask-plugin": "1.14.16",
     "jquery-validation": "1.19.2",
