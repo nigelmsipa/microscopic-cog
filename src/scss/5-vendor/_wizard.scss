@@ -29,23 +29,6 @@
   }
 }
 
-.wizard .step-content {
+.wizard .tab-pane {
   padding: $card-spacer-x !important;
-}
-
-.wizard.sw-theme-arrows > ul.step-anchor {
-  background: $white;
-  border-top: 1px solid $gray-300;
-}
-
-.sw-theme-arrows > ul.step-anchor > li {
-  a,
-  a:hover {
-    background: $white;
-  }
-
-  a:after,
-  a:hover:after {
-    border-left-color: $white;
-  }
 }

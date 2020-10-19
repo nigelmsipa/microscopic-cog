@@ -1,63 +1,63 @@
 .navbar-landing {
-  background: linear-gradient(90deg, darken($dark, 12), $dark);
+  background: darken($primary, 35%);
   padding: $spacer*0.5 $spacer*1.5;
+  font-size: 1rem;
+
+  @include media-breakpoint-down(md) {
+    width: 100% !important;
+  }
 }
 
 .landing-intro {
-  background: linear-gradient(90deg, darken($dark, 12), $dark);
+  background: darken($primary, 35%);
+  color: $white;
+  overflow: hidden;
+}
+
+.landing-intro-title {
+  font-size: 2.5rem;
   color: $white;
 }
 
-.landing-intro-brand {
-  color: $primary;
-  width: 42px;
-  height: 42px;
+.landing-intro-subtitle {
+  font-size: 1.0875rem;
+  color: $gray-300;
 }
 
 .landing-intro-img {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-  min-height: 550px;
+  box-shadow: $box-shadow-lg;
+
+  &:before {
+    background: linear-gradient(transparent,rgba(0,0,0,.15));
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    content: " ";
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 250px;
+  }
 }
 
-.landing-intro-img-default,
-.landing-intro-img-analytics {
-  position: absolute;
-  bottom: 0;
-}
-
-.landing-intro-img-default {
-  width: 80%;
-  right: 0;
+.landing-intro-shape {
   z-index: 2;
-  box-shadow: -10px 0px 15px 0px rgba($black, 0.25);
-}
-
-.landing-intro-img-analytics {
-  width: 80%;
-  left: 0;
-  z-index: 1;
-}
-
-.landing-features-icon {
-  width: 42px;
-  height: 42px;
-  color: darken($primary, 5%);
+  position: absolute;
+  overflow: hidden;
+  margin-top: -14.5vw;
+  
+  @include media-breakpoint-up(lg) {
+    margin-top: -13vw;
+  }
 }
 
 .landing-img {
-  box-shadow: 0 0 3rem rgba(darken($primary, 25), 0.075);
-  border: 1px solid rgba($black, 0.075);
-  transition: all .1s ease-in-out;
+  box-shadow: rgba(darken($primary, 25), 0.15) 0px 4px 12px 0px;
+  transition: all .15s ease-in-out;
   
   &:hover {
     transform: scale(1.035);
   }
-}
-
-.landing-stars {
-  color: $yellow;
 }
 
 .landing-feature {
@@ -74,5 +74,35 @@
     width: 28px;
     height: 28px;
     color: darken($primary, 5);
+  }
+}
+
+.landing-stars {
+  color: $yellow;
+}
+
+.landing-quote {
+  p {
+    line-height: 1.8rem;
+
+    span {
+      display: inline;
+      background: lighten($primary, 35%);
+      padding: .0625em .125em;
+    }
+  }
+}
+
+.landing-footer {
+  background: darken($primary, 41%);
+  color: $white;
+  overflow: hidden;
+}
+
+.landing-footer-container {
+  margin-top: 0;
+  
+  @include media-breakpoint-up(xl) {
+    margin-top: -5vw;
   }
 }

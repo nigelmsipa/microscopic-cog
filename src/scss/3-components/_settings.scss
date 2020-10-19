@@ -15,7 +15,7 @@
   background: $gray-800;
   color: $white;
   position: fixed;
-  top: 200px;
+  top: 220px;
   right: 0;
   width: 46px;
   padding: $spacer*0.75 $spacer*0.75;
@@ -140,7 +140,8 @@
 
   img {
     border-radius: $border-radius;
-    border: 1px solid $gray-400;
+    border: 1px solid $gray-200;
+    box-shadow: $box-shadow-sm;
     transform: scale(1);
     transition: all .1s ease-in-out;
   }

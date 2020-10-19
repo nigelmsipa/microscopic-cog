@@ -1,19 +1,19 @@
 /*
  * Add the right theme colors to the window object
  * so this can be used by the charts and vector maps
- * - classic (default)
+ * - corporate (default)
+ * - classic
  * - modern
- * - corporate
  */
 
 let theme = {
-  primary: "#47BAC1",
-  secondary: "#a180da",
-  tertiary: "#5fc27e",
-  success: "#5fc27e",
-  info: "#5b7dff",
-  warning: "#fcc100",
-  danger: "#f44455"
+  primary: "#3B82EC",
+  secondary: "#495057",
+  tertiary: "#0069fc",
+  success: "#4BBF73",
+  info: "#1F9BCF",
+  warning: "#f0ad4e",
+  danger: "#d9534f"
 };
 
 // For each stylesheet loaded on the page
@@ -25,15 +25,15 @@ $("link[href]").each(function() {
 
   switch (item) {
     // Overwrite theme var if corporate theme is found
-    case "corporate.css":
+    case "classic.css":
       theme = {
-        primary: "#3A89FF",
-        secondary: "#495057",
-        tertiary: "#0069fc",
-        success: "#4BBF73",
-        info: "#1F9BCF",
-        warning: "#f0ad4e",
-        danger: "#d9534f"
+        primary: "#47BAC1",
+        secondary: "#a180da",
+        tertiary: "#5fc27e",
+        success: "#5fc27e",
+        info: "#5b7dff",
+        warning: "#fcc100",
+        danger: "#f44455"
       };
       break;
     // Overwrite theme var if modern theme is found

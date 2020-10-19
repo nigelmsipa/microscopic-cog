@@ -52,7 +52,7 @@ function getCurrentTheme() {
     return queryParameter;
   }
 
-  return cookie ? cookie : "classic";
+  return cookie ? cookie : "corporate";
 }
 
 // Append theme style-tag to <head>
@@ -113,11 +113,6 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="settings-section">
           <small class="d-block text-uppercase font-weight-bold text-muted mb-2">Themes</small>
 
-          <a class="settings-theme" href="dashboard-analytics.html?theme=classic">
-            <img src="img/screenshots/theme-classic-small.png" class="img-fluid" alt="Classic" />
-            <span class="d-inline-block mt-1 text-muted">Classic</span>
-          </a>
-
           <a class="settings-theme" href="dashboard-analytics.html?theme=corporate">
             <img src="img/screenshots/theme-corporate-small.png" class="img-fluid" alt="Corporate" />
             <span class="d-inline-block mt-1 text-muted">Corporate</span>
@@ -128,7 +123,12 @@ document.addEventListener("DOMContentLoaded", function() {
             <span class="d-inline-block mt-1 text-muted">Modern</span>
           </a>
 
-          <a href="https://themes.getbootstrap.com/product/appstack-responsive-admin-template/" target="_blank" class="btn btn-primary btn-block btn-lg"><i class="fas fa-shopping-cart"></i> Buy AppStack</a>
+          <a class="settings-theme" href="dashboard-analytics.html?theme=classic">
+            <img src="img/screenshots/theme-classic-small.png" class="img-fluid" alt="Classic" />
+            <span class="d-inline-block mt-1 text-muted">Classic</span>
+          </a>
+
+          <a href="https://themes.getbootstrap.com/product/appstack-responsive-admin-template/" target="_blank" class="btn btn-primary btn-block btn-lg"><i class="fas fa-shopping-cart"></i> Get AppStack</a>
         </div>
 
       </div>

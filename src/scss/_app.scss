@@ -51,6 +51,7 @@
 @import "4-utilities/font";
 @import "4-utilities/overflow";
 @import "4-utilities/position";
+@import "4-utilities/z-index";
 
 // 3rd party plugins
 @import "~apexcharts/src/assets/apexcharts";
@@ -65,8 +66,7 @@
 @import "~quill/dist/quill.snow";
 @import "~select2/src/scss/core";
 @import "~simplebar/dist/simplebar";
-@import "~smartwizard/dist/css/smart_wizard";
-@import "~smartwizard/dist/css/smart_wizard_theme_arrows";
+@import "~smartwizard/dist/css/smart_wizard_all";
 @import "~tempusdominus-bootstrap-4/src/sass/tempusdominus-bootstrap-4";
 @import "~toastr/toastr";
 @import "~fullcalendar/main";
