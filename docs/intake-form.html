@@ -34,7 +34,7 @@
 					<div class="row justify-content-center">
 
 
-						<div class="col-md-10 col-sm-12">
+						<div class="col-md-8 col-sm-12">
 							<h1 class="display-5 text-primary text-center ">Intake Form</h1>
 							<div id="smartwizard-arrows-primary" class="wizard wizard-primary mb-4">
 								<ul class="nav">
@@ -220,7 +220,8 @@
 													any
 													bad
 													experience
-													with, cardiovascular exercise?</label>
+													with, cardiovascular exercise? <span
+														class="text-danger">*</span></label>
 
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
@@ -238,7 +239,8 @@
 												<label for="">Do you have any negative feelings toward, or have you had
 													any
 													bad
-													experience with, Resistance training?
+													experience with, Resistance training? <span
+														class="text-danger">*</span>
 												</label>
 
 												<label class="custom-control custom-radio">
@@ -257,7 +259,8 @@
 												<label for="">Do you have any negative feelings toward, or have you had
 													any
 													bad
-													experience with, fitness testing and evaluation?
+													experience with, fitness testing and evaluation? <span
+														class="text-danger">*</span>
 												</label>
 
 												<label class="custom-control custom-radio">
@@ -274,7 +277,7 @@
 											</div>
 											<div class="form-group">
 												<label for="">Are you willing to devote at least 75 min a week towards
-													cardiovascular exercise?
+													cardiovascular exercise? <span class="text-danger">*</span>
 												</label>
 
 												<label class="custom-control custom-radio">
@@ -291,7 +294,7 @@
 											</div>
 											<div class="form-group">
 												<label for="">Are you willing to devote at least 2 days a week towards
-													resistance training ?
+													resistance training ? <span class="text-danger">*</span>
 												</label>
 
 												<label class="custom-control custom-radio">
@@ -306,52 +309,21 @@
 													</span>
 												</label>
 											</div>
-
-										</form>
-									</div>
-									<div id="arrows-primary-step-5" class="tab-pane" role="tabpanel">
-										<form>
-											<h1 class="text-primary">Individual Differences
-											</h1>
-											<div class="form-group">
-												<label for="input-group-example">Weight in pounds:</label>
-												<input type="number" class="form-control" id="input-group-example"
-													aria-describedby="input-group-example" placeholder=" ">
-												<small id="input-group-help" class="form-text text-muted"></small>
-											</div>
-											<div class="form-group">
-												<label for="input-group-example">Height in Inches:</label>
-												<input type="number" class="form-control" id="input-group-example"
-													aria-describedby="input-group-example" placeholder=" ">
-												<small id="input-group-help" class="form-text text-muted"></small>
-											</div>
-											<div class="form-group">
-												<label class="form-label">Birthday </label>
-												<div class="input-group date" id="datetimepicker-date"
-													data-target-input="nearest">
-													<input type="text" class="form-control datetimepicker-input"
-														data-target="#datetimepicker-date" />
-													<div class="input-group-append" data-target="#datetimepicker-date"
-														data-toggle="datetimepicker">
-														<div class="input-group-text"><i class="fa fa-calendar"></i>
-														</div>
-													</div>
-												</div>
-											</div>
 											<div class="form-group">
 												<label for="">How much experience do you have with Resistance Training?
+													<span class="text-danger">*</span>
 
 												</label>
 
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
 														class="custom-control-input">
-													<span class="custom-control-label">No previous experience</span>
+													<span class="custom-control-label">None </span>
 												</label>
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
 														class="custom-control-input">
-													<span class="custom-control-label"> Some previous experience (6-12
+													<span class="custom-control-label"> Some (6-12
 														months
 														)
 													</span>
@@ -359,25 +331,53 @@
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
 														class="custom-control-input">
-													<span class="custom-control-label"> Significant previous experience
+													<span class="custom-control-label"> Significant
 														(12
 														months+)
 													</span>
 												</label>
 											</div>
+										</form>
+									</div>
+									<div id="arrows-primary-step-5" class="tab-pane" role="tabpanel">
+										<form>
+											<h1 class="text-primary">Individual Differences
+											</h1>
+											<div class="form-group">
+												<label for="input-group-example">Weight in pounds: <span
+														class="text-danger">*</span></label>
+												<input type="number" class="form-control" id="input-group-example"
+													aria-describedby="input-group-example" placeholder=" ">
+												<small id="input-group-help" class="form-text text-muted"></small>
+											</div>
+											<div class="form-group">
+												<label for="input-group-example">Height in Inches: <span
+														class="text-danger">*</span></label>
+												<input type="number" class="form-control" id="input-group-example"
+													aria-describedby="input-group-example" placeholder=" ">
+												<small id="input-group-help" class="form-text text-muted"></small>
+											</div>
+											<div class="form-group">
+												<label for="Timely">Birthday <span class="text-danger">*</span></label>
+												<input type="date" class="form-control" id="Timely"
+													aria-describedby="inputHelp">
+												<small id="emailHelp" class="form-text text-muted">Enter your date of
+													birth
+
+
+												</small>
+											</div>
+
 											<div class="form-group mt-3">
 												<label for="">
-													<h5>Do you now have, or have you had in the past? [SELECT ALL THAT
-														APPLY]</h5>
+													Do you now have, or have you had in the past? [SELECT
+													ALL THAT
+													APPLY] <span class="text-danger">*</span> <span
+														class="text-danger">*</span><b class="">
 
+													</b>
+												</label>
 
-												</label>
-												<label class="custom-control custom-checkbox">
-													<input type="checkbox" class="custom-control-input">
-													<span class="custom-control-label">History of heart problems, chest
-														pain, or
-														stroke </span>
-												</label>
 												<label class="custom-control custom-checkbox">
 													<input type="checkbox" class="custom-control-input">
 													<span class="custom-control-label"> Elevated blood pressure</span>
@@ -451,7 +451,12 @@
 														be
 														aggravated by lifting weights or other physical activity </span>
 												</label>
-
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input">
+													<span class="custom-control-label">History of heart problems, chest
+														pain, or
+														stroke </span>
+												</label>
 											</div>
 
 
@@ -462,28 +467,28 @@
 											<h1 class="text-primary">Fatigue Manegement
 											</h1>
 											<div class="form-group">
-												Rank your average stress levels
-												<span class="text-danger">*</span>
+												Rank your average stress levels <span class="text-danger">*</span>
+
 												<br>
 												<div class="d-flex justify-content-start my-4">
 													<div class="" style="width: 100%;">
-														<input type="range" class="custom-range" id="confident" min="0"
+														<input type="range" class="custom-range" id="stress" min="0"
 															max="10" step="1">
 													</div>
-													<span class="font-weight-bold text-primary ml-2 confident"></span>
+													<span class="font-weight-bold text-primary ml-2 stress"></span>
 												</div>
 
 											</div>
 											<div class="form-group">
-												Rank your average sleep quality
-												<span class="text-danger">*</span>
+												Rank your average sleep quality <span class="text-danger">*</span>
+
 												<br>
 												<div class="d-flex justify-content-start my-4">
 													<div class="" style="width: 100%;">
-														<input type="range" class="custom-range" id="confident" min="0"
+														<input type="range" class="custom-range" id="sleep" min="0"
 															max="10" step="1">
 													</div>
-													<span class="font-weight-bold text-primary ml-2 confident"></span>
+													<span class="font-weight-bold text-primary ml-2 sleep"></span>
 												</div>
 
 											</div>
@@ -491,7 +496,8 @@
 												<label for=""> Do you have any negative feelings toward, or have you had
 													any
 													bad
-													experience with your diet and nutrition?</label>
+													experience with your diet and nutrition? <span
+														class="text-danger">*</span></label>
 
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
@@ -509,7 +515,8 @@
 												<label for=""> How likely are you to take into account the nutrition
 													facts
 													of
-													food products before consuming them?
+													food products before consuming them? <span
+														class="text-danger">*</span>
 												</label>
 
 												<label class="custom-control custom-radio">
@@ -534,7 +541,8 @@
 												</label>
 											</div>
 											<div class="form-group">
-												<label for=""> How frequently do you drink alcoholic beverages?
+												<label for=""> How frequently do you drink alcoholic beverages? <span
+														class="text-danger">*</span>
 												</label>
 
 												<label class="custom-control custom-radio">
@@ -562,7 +570,7 @@
 												<label for="">How often do you drink the recommended 8 8-ounce glasses
 													of
 													water
-													a day?
+													a day? <span class="text-danger">*</span>
 												</label>
 
 												<label class="custom-control custom-radio">
@@ -587,7 +595,8 @@
 												</label>
 											</div>
 											<div class="form-group">
-												<label for=""> How would you categorize your daily activity level
+												<label for=""> How would you categorize your daily activity level <span
+														class="text-danger">*</span>
 												</label>
 
 												<label class="custom-control custom-radio">
@@ -638,13 +647,13 @@
 										<form>
 											<h1 class="text-primary">Extra</h1>
 											<div class="form-group ">
-												<label>Is there something else you
-													would like to tell us?</label>
+												<label>Is there anything else you
+													would like your trainer to know?</label>
 												<div>
-													<textarea class="form-control" placeholder="" rows="3"></textarea>
+													<input type="text" class="form-control" placeholder=" ">
 												</div>
 											</div>
-
+											<button class="btn btn-primary ">submit</button>
 
 										</form>
 									</div>
@@ -659,33 +668,7 @@
 				</div>
 			</main>
 
-			<footer class="footer">
-				<div class="container-fluid">
-					<div class="row text-muted">
-						<div class="col-6 text-left">
-							<ul class="list-inline">
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Support</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Help Center</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Privacy</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Terms of Service</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-6 text-right">
-							<p class="mb-0">
-								&copy; 2020 - <a href="index.html" class="text-muted">AppStack</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</footer>
+
 		</div>
 	</div>
 
@@ -791,8 +774,28 @@
 		});
 		$(document).ready(function () {
 
+			const $valueSpan = $('.stress');
+			const $value = $('#stress');
+			$valueSpan.html($value.val());
+			$value.on('input change', () => {
+
+				$valueSpan.html($value.val());
+			});
+		});
+		$(document).ready(function () {
+
 			const $valueSpan = $('.important');
 			const $value = $('#important');
+			$valueSpan.html($value.val());
+			$value.on('input change', () => {
+
+				$valueSpan.html($value.val());
+			});
+		});
+		$(document).ready(function () {
+
+			const $valueSpan = $('.sleep');
+			const $value = $('#sleep');
 			$valueSpan.html($value.val());
 			$value.on('input change', () => {
 
