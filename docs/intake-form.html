@@ -42,10 +42,12 @@
 											<br /><small> </small></a></li>
 									<li class="nav-item"><a class="nav-link" href="#arrows-primary-step-2">Goal Setting
 											<br /><small> </small></a></li>
-									<li class="nav-item"><a class="nav-link" href="#arrows-primary-step-3">Adherence
+									<li class="nav-item"><a class="nav-link" href="#arrows-primary-step-3">Behavior
+											change
 											<br /><small> </small></a></li>
-									<li class="nav-item"><a class="nav-link" href="#arrows-primary-step-4">Exercise
-											History
+									<li class="nav-item"><a class="nav-link" href="#arrows-primary-step-4">Training
+											Preferances
+
 											<br /><small> </small></a></li>
 									<li class="nav-item"><a class="nav-link" href="#arrows-primary-step-5">Individual
 											Differences
@@ -81,7 +83,17 @@
 												</label>
 												<input type="email" class="form-control" placeholder="Email">
 											</div>
+											<div class="form-group">
+												<label class="form-label">Virtual Training Platform
+													<span class="text-danger">*</span>
+												</label>
+												<select class="custom-select  mb-3">
+													<option selected>Zoom</option>
+													<option value="1">FaceTime</option>
+													<option value="2">Not doing Virtual training</option>
 
+												</select>
+											</div>
 										</form>
 									</div>
 									<div id="arrows-primary-step-2" class="tab-pane" role="tabpanel">
@@ -275,42 +287,10 @@
 													</span>
 												</label>
 											</div>
-											<div class="form-group">
-												<label for="">Are you willing to devote at least 75 min a week towards
-													cardiovascular exercise? <span class="text-danger">*</span>
-												</label>
 
-												<label class="custom-control custom-radio">
-													<input name="custom-radio" type="radio"
-														class="custom-control-input">
-													<span class="custom-control-label">Yes</span>
-												</label>
-												<label class="custom-control custom-radio">
-													<input name="custom-radio" type="radio"
-														class="custom-control-input">
-													<span class="custom-control-label">No
-													</span>
-												</label>
-											</div>
-											<div class="form-group">
-												<label for="">Are you willing to devote at least 2 days a week towards
-													resistance training ? <span class="text-danger">*</span>
-												</label>
 
-												<label class="custom-control custom-radio">
-													<input name="custom-radio" type="radio"
-														class="custom-control-input">
-													<span class="custom-control-label">Yes</span>
-												</label>
-												<label class="custom-control custom-radio">
-													<input name="custom-radio" type="radio"
-														class="custom-control-input">
-													<span class="custom-control-label">No
-													</span>
-												</label>
-											</div>
-											<div class="form-group">
-												<label for="">How much experience do you have with Resistance Training?
+											<div class="form-group ">
+												<label for="">How long have you been training with weights?
 													<span class="text-danger">*</span>
 
 												</label>
@@ -318,24 +298,58 @@
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
 														class="custom-control-input">
-													<span class="custom-control-label">None </span>
+													<span class="custom-control-label">0 Months </span>
 												</label>
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
 														class="custom-control-input">
-													<span class="custom-control-label"> Some (6-12
-														months
-														)
+													<span class="custom-control-label"> 6-12
+														Months
+
 													</span>
 												</label>
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
 														class="custom-control-input">
-													<span class="custom-control-label"> Significant
-														(12
-														months+)
+													<span class="custom-control-label">
+														12+
+														Months
 													</span>
 												</label>
+											</div>
+											<div class="form-group">
+												<label class="form-label">How many sessions a week do you plan on doing?
+													<span class="text-danger">*</span>
+												</label>
+												<select class="custom-select  ">
+													<option selected>0</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="2">3</option>
+													<option value="2">4</option>
+													<option value="2">5</option>
+													<option value="2">6</option>
+													<option value="2">7</option>
+
+												</select>
+											</div>
+											<div class="form-group">
+												<label class="form-label">How many days a week outside of sessions are
+													you
+													willing to train?
+													<span class="text-danger">*</span>
+												</label>
+												<select class="custom-select  ">
+													<option selected>0</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="2">3</option>
+													<option value="2">4</option>
+													<option value="2">5</option>
+													<option value="2">6</option>
+													<option value="2">7</option>
+
+												</select>
 											</div>
 										</form>
 									</div>
@@ -369,7 +383,7 @@
 											</div>
 
 											<div class="form-group mt-3">
-												<label for="">
+												<label for="" style="font-size: 1.15em;">
 													Do you now have, or have you had in the past? [SELECT
 													ALL THAT
 													APPLY] <span class="text-danger">*</span> <span
@@ -377,6 +391,7 @@
 
 													</b>
 												</label>
+												<br>
 
 												<label class="custom-control custom-checkbox">
 													<input type="checkbox" class="custom-control-input">
@@ -464,7 +479,7 @@
 									</div>
 									<div id="arrows-primary-step-6" class="tab-pane" role="tabpanel">
 										<form>
-											<h1 class="text-primary">Fatigue Manegement
+											<h1 class="text-primary">Health Habits
 											</h1>
 											<div class="form-group">
 												Rank your average stress levels <span class="text-danger">*</span>
@@ -493,23 +508,35 @@
 
 											</div>
 											<div class="form-group">
-												<label for=""> Do you have any negative feelings toward, or have you had
-													any
-													bad
-													experience with your diet and nutrition? <span
-														class="text-danger">*</span></label>
+												<label for=""> What is your diet like?
+													<span class="text-danger">*</span></label>
 
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
 														class="custom-control-input">
-													<span class="custom-control-label">Yes</span>
+													<span class="custom-control-label"> Generally not eating
+														enough</span>
 												</label>
 												<label class="custom-control custom-radio">
 													<input name="custom-radio" type="radio"
 														class="custom-control-input">
-													<span class="custom-control-label">No
+													<span class="custom-control-label"> Generally eating
+														just the right amount</span>
+												</label>
+
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label"> Generally eating
+														too much</span>
+												</label>
+												<label class="custom-control custom-radio">
+													<input name="custom-radio" type="radio"
+														class="custom-control-input">
+													<span class="custom-control-label"> I dont know
 													</span>
 												</label>
+
 											</div>
 											<div class="form-group">
 												<label for=""> How likely are you to take into account the nutrition
